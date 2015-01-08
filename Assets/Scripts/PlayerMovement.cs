@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-    public const int c_Speed = 2;
+    public const int c_Speed = 5;
     protected Rigidbody m_Rigidbody;
     protected Vector3 m_Direction;
 
@@ -33,8 +33,13 @@ public class PlayerMovement : MonoBehaviour {
         else if (v < -0.1f) {
             m_Direction = new Vector3 (0.0f, 0.0f, -1.0f);
         }
+        else {
+            m_Direction = Vector3.zero;
+        }
 
-        Vector3 movement = m_Direction * c_Speed * Time.deltaTime;
-        m_Rigidbody.MovePosition (this.transform.position + movement);
+        if (m_Direction != Vector3.zero) {
+            Vector3 movement = m_Direction * c_Speed;
+            m_Rigidbody.velocity = movement;
+        }
     }
 }
