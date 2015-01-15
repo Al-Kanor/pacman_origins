@@ -29,11 +29,14 @@ public class Tile {
             }
         }
     }
+    public bool m_HasCollectible;
     #endregion
 
     #region Constructors
     public Tile (float x, float y) {
         m_Position = new Vector2 (x, y);
+        m_Type = TILE_TYPES.WALL;
+        m_HasCollectible = false;
     }
 
     public Tile ()
