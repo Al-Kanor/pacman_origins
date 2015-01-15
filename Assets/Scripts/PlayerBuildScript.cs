@@ -13,8 +13,7 @@ public class PlayerBuildScript : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown (m_PXBuild)) {
             Vector3 direction = gameObject.GetComponent<PlayerMovement> ().GetDirection ();
-            
-            Instantiate (TowerPrefab, new Vector3(transform.position.x, 2, transform.position.z) + direction, transform.rotation);
+            Instantiate (TowerPrefab, new Vector3(transform.position.x, 0.5f, transform.position.z) + direction, transform.rotation);
         }
     }
 }
