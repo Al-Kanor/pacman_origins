@@ -13,8 +13,8 @@ public class CollectScript : MonoBehaviour {
     }
 
     void OnTriggerEnter (Collider other) {
-        if (other.name.Equals ("Gun-man")
-            || other.name.Equals ("Build-man")) {
+        if (other.name.Equals ("P1")
+            || other.name.Equals ("P2")) {
             //Debug.Log ("Collecté !");
             m_ResourcesManager.p_CurrentGold += m_GoldValue;
             m_Tile.m_HasCollectible = false;

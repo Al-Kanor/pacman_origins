@@ -3,14 +3,21 @@ using System.Collections;
 
 public class PlayerMovementScript : MonoBehaviour {
     public const int c_Speed = 5;
+
     protected Rigidbody m_Rigidbody;
     protected Vector3 m_Direction;
-
     protected string m_PXHorizontal = "";
     protected string m_PXVertical = "";
+    protected Transform SpawnZone;
 
     public Vector3 GetDirection () {
         return m_Direction;
+    }
+
+    void OnCollisionEnter (Collision other) {
+        if ("Ghost" == other.gameObject.tag) {
+            transform.position = SpawnZone.position;
+        }
     }
 
     protected virtual void Start () {
