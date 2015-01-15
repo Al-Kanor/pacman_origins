@@ -6,5 +6,6 @@ public class P1MovementScript : PlayerMovementScript {
         base.Start ();
         m_PXHorizontal = "P1Horizontal";
         m_PXVertical = "P1Vertical";
+        SpawnZone = GameObject.Find ("SpawnZoneP1").transform;
     }
 }

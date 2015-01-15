@@ -15,7 +15,7 @@ public class TileGridScript : MonoBehaviour {
     protected void Start () {
         for (int i = 0; i < c_GridWidth; ++i) {
             for (int j = 0; j < c_GridHeight; ++j) {
-                Debug.Log (m_Grid[i][j].p_Type.ToString ());
+                //Debug.Log (m_Grid[i][j].p_Type.ToString ());
             }
         }
     }

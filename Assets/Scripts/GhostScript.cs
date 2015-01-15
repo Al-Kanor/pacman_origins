@@ -24,11 +24,6 @@ public class GhostScript : MonoBehaviour {
     void Start () {
         goal = GameObject.Find ("Goal").transform;
         navComponent = this.gameObject.GetComponent<NavMeshAgent> ();
-    }
-
-    void FixedUpdate () {
-        if (goal) {
-            navComponent.SetDestination (goal.position);
-        }
+        navComponent.SetDestination (goal.position);
     }
 }
