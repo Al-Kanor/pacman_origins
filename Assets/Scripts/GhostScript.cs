@@ -7,7 +7,7 @@ public class GhostScript : MonoBehaviour {
     public Transform goal;
     public GameObject GhostDeathFXPrefab;
 
-    private NavMeshAgent navComponent;
+    private bool isSlowed = false;
 
     public void Death () {
         Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);
@@ -21,9 +21,27 @@ public class GhostScript : MonoBehaviour {
         GameObject.Destroy (gameObject);
     }
 
+    IEnumerator EndOfSlowDown () {
+        yield return new WaitForSeconds (1);
+        this.gameObject.GetComponent<NavMeshAgent> ().speed = 3.5f;
+        StopCoroutine ("EndOfSlowDown");
+    }
+
+    void FixedUpdate () {
+        if (isSlowed) {
+            StopCoroutine ("EndOfSlowDown");
+            StartCoroutine ("EndOfSlowDown");
+            isSlowed = false;
+        }
+    }
+
+    public void SlowDown () {
+        isSlowed = true;
+        this.gameObject.GetComponent<NavMeshAgent> ().speed = 1;
+    }
+
     void Start () {
         goal = GameObject.Find ("Goal").transform;
-        navComponent = this.gameObject.GetComponent<NavMeshAgent> ();
-        navComponent.SetDestination (goal.position);
+        this.gameObject.GetComponent<NavMeshAgent> ().SetDestination (goal.position);
     }
 }
