@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ResourcesManagmentScript : MonoBehaviour {
     #region Members
-    public int m_CurrentGold;
+    private int m_CurrentGold;
     public int p_CurrentGold {
         get {
             return m_CurrentGold;
