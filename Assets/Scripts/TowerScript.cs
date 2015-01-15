@@ -19,14 +19,8 @@ public class TowerScript : MonoBehaviour {
         StartCoroutine ("Shoot");
         StopCoroutine("Clamp");
     }
-    IEnumerator Shoot () {
-        do {
-            Instantiate (BulletPrefab, transform.position, transform.rotation);
-            yield return new WaitForSeconds (1);
-        } while (true);
-    }
 
-    void Start () {
+    protected virtual void Start () {
         StartCoroutine ("Clamp");
     }
 }
