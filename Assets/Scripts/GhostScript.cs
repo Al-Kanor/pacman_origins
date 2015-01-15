@@ -22,6 +22,7 @@ public class GhostScript : MonoBehaviour {
     }
 
     void Start () {
+        goal = GameObject.Find ("Goal").transform;
         navComponent = this.gameObject.GetComponent<NavMeshAgent> ();
     }
 
