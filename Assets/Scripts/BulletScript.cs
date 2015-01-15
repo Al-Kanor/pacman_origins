@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
     public float speed;
     public int strength;
+    public bool canSlowDown = false;
 
     IEnumerator DeathAfterDelay () {
         yield return new WaitForSeconds (3);
@@ -14,7 +15,11 @@ public class BulletScript : MonoBehaviour {
         if ("Ghost" == other.gameObject.tag) {
             GhostScript ghostScript = other.gameObject.GetComponent<GhostScript> ();
             ghostScript.life -= strength;
-
+            
+            if (canSlowDown) {
+                ghostScript.SlowDown ();
+            }
+            
             if (ghostScript.life <= 0) {
                 ghostScript.Death ();
             }

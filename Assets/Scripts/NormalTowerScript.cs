@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class NormalTowerScript : TowerScript {
-    public bool hasValidTarget = false;
-    GameObject target;
+    protected bool hasValidTarget = false;
+    protected GameObject target;
 
     IEnumerator Shoot () {
         do {
