@@ -14,7 +14,7 @@ public class CollectScript : MonoBehaviour {
     void OnTriggerEnter (Collider other) {
         if (other.name.Equals ("Gun-man")
             || other.name.Equals ("Build-man")) {
-            Debug.Log ("Collecté !");
+            //Debug.Log ("Collecté !");
             m_ResourcesManager.p_CurrentGold += m_GoldValue;
             GameObject.Destroy (this.gameObject);
         }

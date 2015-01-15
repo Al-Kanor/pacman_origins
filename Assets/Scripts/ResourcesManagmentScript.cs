@@ -10,7 +10,7 @@ public class ResourcesManagmentScript : MonoBehaviour {
         }
         set {
             m_CurrentGold = value;
-            Debug.Log (m_CurrentGold.ToString ());
+            //Debug.Log (m_CurrentGold.ToString ());
         }
     }
     public const int c_StartGold = 100;
