@@ -12,6 +12,11 @@ TextureImporter:
     21300014: White-Ghost
     21300016: Tower
     21300018: Bullet
+    21300020: Pac_gum
+    21300022: Cherry
+    21300024: Melon
+    21300026: Strawberry
+    21300028: Peach
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -149,6 +154,56 @@ TextureImporter:
         x: 176
         y: 44
         width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac_gum
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 90
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cherry
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 104
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melon
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 103
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Strawberry
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 84
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Peach
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 64
+        width: 11
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
