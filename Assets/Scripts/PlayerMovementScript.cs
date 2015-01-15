@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovementScript : MonoBehaviour {
     public const int c_Speed = 5;
     protected Rigidbody m_Rigidbody;
     protected Vector3 m_Direction;
