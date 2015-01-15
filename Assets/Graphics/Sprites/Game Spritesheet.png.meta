@@ -4,6 +4,14 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Build-man
     21300002: Gun-man
+    21300004: Red-Ghost
+    21300006: Pink-Ghost
+    21300008: Green-Ghost
+    21300010: Yellow-Ghost
+    21300012: Blue-Ghost
+    21300014: White-Ghost
+    21300016: Tower
+    21300018: Bullet
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,7 +58,7 @@ TextureImporter:
         serializedVersion: 2
         x: 126
         y: 263
-        width: 15
+        width: 14
         height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -58,10 +66,90 @@ TextureImporter:
     - name: Gun-man
       rect:
         serializedVersion: 2
-        x: 47
+        x: 46
         y: 264
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Red-Ghost
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 183
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pink-Ghost
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 163
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Green-Ghost
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 143
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Yellow-Ghost
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 123
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blue-Ghost
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 103
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: White-Ghost
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 103
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tower
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 83
         width: 13
         height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bullet
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 44
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

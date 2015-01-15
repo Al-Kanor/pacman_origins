@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour {
     protected string m_PXHorizontal = "";
     protected string m_PXVertical = "";
 
+    public Vector3 GetDirection () {
+        return m_Direction;
+    }
+
     protected virtual void Start () {
         m_Rigidbody = this.GetComponent<Rigidbody> ();
         m_Direction = Vector3.forward;
@@ -34,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
             m_Direction = new Vector3 (0.0f, 0.0f, -1.0f);
         }
         else {
-            m_Direction = Vector3.zero;
+            //m_Direction = Vector3.zero;
         }
 
         if (m_Direction != Vector3.zero) {
