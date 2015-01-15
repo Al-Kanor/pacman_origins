@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class CollectScript : MonoBehaviour {
     #region Members
@@ -10,6 +11,9 @@ public class CollectScript : MonoBehaviour {
 
     void Start () {
         m_ResourcesManager = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManagmentScript> ();
+        Vector2 tilePosition = new Vector2 (this.transform.position.x, this.transform.position.z);
+        TileGridScript tileGridScript = GameObject.Find ("TileGridManager").GetComponent<TileGridScript> ();
+        m_Tile = tileGridScript.m_Grid.FirstOrDefault (x => x.GetPosition ().Equals (tilePosition));
     }
 
     void OnTriggerEnter (Collider other) {
