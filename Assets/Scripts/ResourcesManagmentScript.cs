@@ -15,6 +15,7 @@ public class ResourcesManagmentScript : MonoBehaviour {
             //Debug.Log (m_CurrentGold.ToString ());
         }
     }
+
     public const int c_StartGold = 10;
 
     private int m_CurrentLifePoint;

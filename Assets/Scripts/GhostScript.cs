@@ -9,12 +9,26 @@ public class GhostScript : MonoBehaviour {
 
     private bool isSlowed = false;
     private ResourcesManagmentScript m_ResourcesManagmentScript;
+    private Transform m_RendererTransform;
+    private Quaternion m_RendererRotation;
     #endregion
 
     void Start () {
         goal = GameObject.Find ("Goal").transform;
         this.gameObject.GetComponent<NavMeshAgent> ().SetDestination (goal.position);
         m_ResourcesManagmentScript = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManagmentScript> ();
+        m_RendererTransform = this.transform.FindChild ("Renderer").transform;
+        m_RendererRotation = new Quaternion ();
+        m_RendererRotation.eulerAngles = new Vector3 (90.0f, 0.0f, 0.0f);
+    }
+
+    void FixedUpdate () {
+        if (isSlowed) {
+            StopCoroutine ("EndOfSlowDown");
+            StartCoroutine ("EndOfSlowDown");
+            isSlowed = false;
+        }
+        m_RendererTransform.rotation = m_RendererRotation;
     }
 
     public void Death (bool goalReached = false) {
@@ -36,14 +50,6 @@ public class GhostScript : MonoBehaviour {
         yield return new WaitForSeconds (1);
         this.gameObject.GetComponent<NavMeshAgent> ().speed = 3.5f;
         StopCoroutine ("EndOfSlowDown");
-    }
-
-    void FixedUpdate () {
-        if (isSlowed) {
-            StopCoroutine ("EndOfSlowDown");
-            StartCoroutine ("EndOfSlowDown");
-            isSlowed = false;
-        }
     }
 
     public void SlowDown () {

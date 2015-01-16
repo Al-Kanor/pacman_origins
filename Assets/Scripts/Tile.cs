@@ -30,6 +30,7 @@ public class Tile {
         }
     }
     public bool m_HasCollectible;
+    public bool m_HasTower;
     #endregion
 
     #region Constructors
@@ -37,6 +38,7 @@ public class Tile {
         m_Position = new Vector2 (x, y);
         m_Type = TILE_TYPES.WALL;
         m_HasCollectible = false;
+        m_HasTower= false;
     }
 
     public Tile ()
