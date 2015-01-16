@@ -8,6 +8,7 @@ public class GameOverScript : MonoBehaviour {
     private GameObject gameOverText;
 
     void FixedUpdate () {
+        Debug.Log (resourcesManagmentScript.p_CurrentLifePoint);
         if (0 == resourcesManagmentScript.p_CurrentLifePoint) {
             //isGameOver = true;
             gameOverText.GetComponent<Text> ().enabled = true;
