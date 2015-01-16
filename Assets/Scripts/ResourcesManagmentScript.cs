@@ -32,7 +32,7 @@ public class ResourcesManagmentScript : MonoBehaviour {
             }
         }
     }
-    public const int c_StartLifePoint = 1;
+    public const int c_StartLifePoint = 20;
 
     private int m_CurrentScore;
     public int p_CurrentScore {
