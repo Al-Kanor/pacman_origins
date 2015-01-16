@@ -20,6 +20,7 @@ public class CollectScript : MonoBehaviour {
         if (other.name.Equals ("P1")
             || other.name.Equals ("P2")) {
             m_ResourcesManager.p_CurrentGold += m_GoldValue;
+            SoundScript.Manager.m_CollectGum.Play ();
             m_Tile.m_HasCollectible = false;
             GameObject.Destroy (this.gameObject);
         }

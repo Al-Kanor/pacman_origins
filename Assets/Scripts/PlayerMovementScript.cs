@@ -8,6 +8,7 @@ public class PlayerMovementScript : MonoBehaviour {
     protected Vector3 m_Direction;
     protected string m_PXHorizontal = "";
     protected string m_PXVertical = "";
+    protected int m_PlayerNumber = 0;
     protected Transform SpawnZone;
     protected Animator animator;
 
@@ -34,6 +35,12 @@ public class PlayerMovementScript : MonoBehaviour {
     void OnCollisionEnter (Collision other) {
         if ("Ghost" == other.gameObject.tag) {
             transform.position = SpawnZone.position;
+            if (m_PlayerNumber == 1) {
+                SoundScript.Manager.m_P1Hit.Play ();
+            }
+            else if (m_PlayerNumber == 2) {
+                SoundScript.Manager.m_P2Hit.Play ();
+            }
         }
     }
 

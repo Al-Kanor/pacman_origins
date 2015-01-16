@@ -30,6 +30,7 @@ public class PlayerBuildScript : MonoBehaviour {
 
         if (spawnTile.p_Type == TILE_TYPES.WALL
             && !spawnTile.m_HasTower) {
+            SoundScript.Manager.m_TowerBuild.Play ();
             spawnTile.m_HasTower = true;
             Instantiate (TowerPrefab, spawnPosition, transform.rotation);
             ResourcesManagmentScript.p_CurrentGold -= c_TowerPrice;

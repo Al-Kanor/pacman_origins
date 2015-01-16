@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour {
                 Instantiate (YellowGhostPrefab, transform.position, transform.rotation);
                 break;
         }
-        
+        SoundScript.Manager.m_GhostSpawn.Play ();
     }
 
     IEnumerator SpawnGhosts () {
@@ -33,7 +33,7 @@ public class SpawnManager : MonoBehaviour {
             if (0 == (int)Random.Range (0, 12)) {
                 SpawnGhost ();
             }
-            
+
             yield return new WaitForSeconds (1);
         } while (true);
     }

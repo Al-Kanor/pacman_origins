@@ -23,6 +23,7 @@ public class GhostScript : MonoBehaviour {
     }
 
     void FixedUpdate () {
+        Debug.Log (m_ResourcesManagmentScript.p_CurrentLifePoint);
         if (isSlowed) {
             StopCoroutine ("EndOfSlowDown");
             StartCoroutine ("EndOfSlowDown");
@@ -33,11 +34,14 @@ public class GhostScript : MonoBehaviour {
 
     public void Death (bool goalReached = false) {
         if (!goalReached) {
-            Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);
+            Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);    
         }
+        else {
+            m_ResourcesManagmentScript.GetDamage ();
+        }
+
         transform.GetChild (0).gameObject.SetActive (false);
 
-        m_ResourcesManagmentScript.GetDamage ();
         StartCoroutine ("EndOfDeath");
     }
 
