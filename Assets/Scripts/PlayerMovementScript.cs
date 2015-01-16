@@ -10,16 +10,6 @@ public class PlayerMovementScript : MonoBehaviour {
     protected string m_PXVertical = "";
     protected Transform SpawnZone;
 
-    public Vector3 GetDirection () {
-        return m_Direction;
-    }
-
-    void OnCollisionEnter (Collision other) {
-        if ("Ghost" == other.gameObject.tag) {
-            transform.position = SpawnZone.position;
-        }
-    }
-
     protected virtual void Start () {
         m_Rigidbody = this.GetComponent<Rigidbody> ();
         m_Direction = Vector3.forward;
@@ -29,6 +19,20 @@ public class PlayerMovementScript : MonoBehaviour {
         float h = Input.GetAxisRaw (m_PXHorizontal);
         float v = Input.GetAxisRaw (m_PXVertical);
         Move (h, v);
+    }
+
+    public Vector3 GetDirection () {
+        return m_Direction;
+    }
+
+    public void BackUpToBarrier () {
+        this.transform.Translate (0.0f, 0.0f, 0.25f);
+    }
+
+    void OnCollisionEnter (Collision other) {
+        if ("Ghost" == other.gameObject.tag) {
+            transform.position = SpawnZone.position;
+        }
     }
 
     protected void Move (float h, float v) {
@@ -43,9 +47,6 @@ public class PlayerMovementScript : MonoBehaviour {
         }
         else if (v < -0.1f) {
             m_Direction = new Vector3 (0.0f, 0.0f, -1.0f);
-        }
-        else {
-            //m_Direction = Vector3.zero;
         }
 
         if (m_Direction != Vector3.zero) {
