@@ -3,21 +3,42 @@ guid: b2cda2197d749954e9c4eed1f48c7da6
 TextureImporter:
   fileIDToRecycleName:
     21300000: Build-man
-    21300002: Gun-man
-    21300004: Red-Ghost
-    21300006: Pink-Ghost
-    21300008: Green-Ghost
-    21300010: Yellow-Ghost
+    21300002: Pac-ManR1
+    21300004: Red-Ghost1
+    21300006: Pink-Ghost1
+    21300008: Green-Ghost1
+    21300010: Yellow-Ghost1
     21300012: Blue-Ghost
     21300014: White-Ghost
     21300016: Tower
-    21300018: Bullet
+    21300018: Apple
     21300020: Pac_gum
     21300022: Cherry
     21300024: Melon
     21300026: Strawberry
     21300028: Peach
     21300030: Ice Tower
+    21300032: Pac-ManR2
+    21300034: Pac-ManL1
+    21300036: Pac-ManL2
+    21300038: Pac-ManU1
+    21300040: Pac-ManU2
+    21300042: Pac-ManD1
+    21300044: Pac-ManD2
+    21300046: Mrs Pac-ManL2
+    21300048: Mrs Pac-ManL1
+    21300050: Mrs Pac-ManR1
+    21300052: Mrs Pac-ManR2
+    21300054: Mrs Pac-ManU1
+    21300056: Mrs Pac-ManU2
+    21300058: Mrs Pac-ManD1
+    21300060: Mrs Pac-ManD2
+    21300062: Red-Ghost2
+    21300064: Pink-Ghost2
+    21300066: Green-Ghost2
+    21300068: Yellow-Ghost2
+    21300070: Ice Bullet
+    21300072: Normal Bullet
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,27 +80,17 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Build-man
+    - name: Pac-ManR1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 263
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gun-man
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 7
         y: 244
-        width: 14
-        height: 14
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Red-Ghost
+    - name: Red-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -89,7 +100,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Pink-Ghost
+    - name: Pink-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -99,7 +110,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Green-Ghost
+    - name: Green-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -109,7 +120,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Yellow-Ghost
+    - name: Yellow-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -149,7 +160,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Bullet
+    - name: Apple
       rect:
         serializedVersion: 2
         x: 176
@@ -216,6 +227,216 @@ TextureImporter:
         y: 43
         width: 13
         height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManR2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 244
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManL1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 264
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManL2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 264
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManU1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 224
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManU2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 224
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManD1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 204
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManD2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 205
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManL2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 263
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManL1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 263
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManR1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 243
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManR2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 243
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManU1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 223
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManU2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 223
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManD1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 203
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManD2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 203
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Red-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 183
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pink-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 163
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Green-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 143
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Yellow-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 123
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ice Bullet
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 180
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Normal Bullet
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 112
+        width: 4
+        height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
