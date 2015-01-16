@@ -9,10 +9,12 @@ public class PlayerMovementScript : MonoBehaviour {
     protected string m_PXHorizontal = "";
     protected string m_PXVertical = "";
     protected Transform SpawnZone;
+    protected Animator animator;
 
     protected virtual void Start () {
         m_Rigidbody = this.GetComponent<Rigidbody> ();
         m_Direction = Vector3.forward;
+        animator = transform.GetChild(0).GetComponent<Animator> ();
     }
 
     protected void Update () {
@@ -38,15 +40,19 @@ public class PlayerMovementScript : MonoBehaviour {
     protected void Move (float h, float v) {
         if (h > 0.1f) {
             m_Direction = new Vector3 (1.0f, 0.0f, 0.0f);
+            animator.SetTrigger ("Right");
         }
         else if (h < -0.1f) {
             m_Direction = new Vector3 (-1.0f, 0.0f, 0.0f);
+            animator.SetTrigger ("Left");
         }
         else if (v > 0.1f) {
             m_Direction = new Vector3 (0.0f, 0.0f, 1.0f);
+            animator.SetTrigger ("Up");
         }
         else if (v < -0.1f) {
             m_Direction = new Vector3 (0.0f, 0.0f, -1.0f);
+            animator.SetTrigger ("Down");
         }
 
         if (m_Direction != Vector3.zero) {

@@ -3,7 +3,7 @@ guid: b2cda2197d749954e9c4eed1f48c7da6
 TextureImporter:
   fileIDToRecycleName:
     21300000: Build-man
-    21300002: Gun-man
+    21300002: Pac-ManR1
     21300004: Red-Ghost
     21300006: Pink-Ghost
     21300008: Green-Ghost
@@ -18,6 +18,21 @@ TextureImporter:
     21300026: Strawberry
     21300028: Peach
     21300030: Ice Tower
+    21300032: Pac-ManR2
+    21300034: Pac-ManL1
+    21300036: Pac-ManL2
+    21300038: Pac-ManU1
+    21300040: Pac-ManU2
+    21300042: Pac-ManD1
+    21300044: Pac-ManD2
+    21300046: Mrs Pac-ManL2
+    21300048: Mrs Pac-ManL1
+    21300050: Mrs Pac-ManR1
+    21300052: Mrs Pac-ManR2
+    21300054: Mrs Pac-ManU1
+    21300056: Mrs Pac-ManU2
+    21300058: Mrs Pac-ManD1
+    21300060: Mrs Pac-ManD2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,23 +74,13 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Build-man
+    - name: Pac-ManR1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 263
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gun-man
-      rect:
-        serializedVersion: 2
-        x: 6
+        x: 7
         y: 244
-        width: 14
-        height: 14
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,6 +221,156 @@ TextureImporter:
         y: 43
         width: 13
         height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManR2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 244
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManL1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 264
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManL2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 264
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManU1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 224
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManU2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 224
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManD1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 204
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pac-ManD2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 205
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManL2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 263
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManL1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 263
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManR1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 243
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManR2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 243
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManU1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 223
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManU2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 223
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManD1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 203
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mrs Pac-ManD2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 203
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
