@@ -9,6 +9,7 @@ public class GoalScript : MonoBehaviour {
             GoalFX.GetComponent<ParticleSystem> ().Play ();
             other.gameObject.GetComponent<GhostScript> ().Death (goalReached: true);
             GameObject.Destroy (other.gameObject);
+            GameObject.Destroy (this.transform.FindChild ("Fruits").GetChild (0).gameObject);
         }
     }
 }
