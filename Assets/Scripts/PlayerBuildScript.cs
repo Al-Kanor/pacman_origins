@@ -26,7 +26,9 @@ public class PlayerBuildScript : MonoBehaviour {
         Vector2 spawn2DPosition = new Vector2 (spawnPosition.x, spawnPosition.z);
         Tile spawnTile = m_TileGridScript.m_Grid.FirstOrDefault (x => x.GetPosition ().Equals (spawn2DPosition));
 
-        if (spawnTile.p_Type == TILE_TYPES.WALL) {
+        if (spawnTile.p_Type == TILE_TYPES.WALL
+            && !spawnTile.m_HasTower) {
+            spawnTile.m_HasTower = true;
             Instantiate (TowerPrefab, spawnPosition, transform.rotation);
             ResourcesManagmentScript.p_CurrentGold -= 10;
         }
