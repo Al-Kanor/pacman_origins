@@ -6,6 +6,8 @@ public class BulletScript : MonoBehaviour {
     public int strength;
     public bool canSlowDown = false;
 
+    private ResourcesManagmentScript resourcesManagmentScript;
+
     IEnumerator DeathAfterDelay () {
         yield return new WaitForSeconds (3);
         GameObject.Destroy (gameObject);
@@ -22,6 +24,7 @@ public class BulletScript : MonoBehaviour {
             
             if (ghostScript.life <= 0) {
                 ghostScript.Death ();
+                resourcesManagmentScript.p_CurrentScore++;
             }
 
             Destroy (gameObject);
@@ -29,6 +32,7 @@ public class BulletScript : MonoBehaviour {
     }
 
     protected virtual void Start () {
+        resourcesManagmentScript = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManagmentScript> ();
         StartCoroutine ("DeathAfterDelay");
     }
 }

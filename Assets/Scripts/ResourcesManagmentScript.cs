@@ -12,7 +12,6 @@ public class ResourcesManagmentScript : MonoBehaviour {
         }
         set {
             m_CurrentGold = value;
-            //Debug.Log (m_CurrentGold.ToString ());
         }
     }
 
@@ -30,11 +29,21 @@ public class ResourcesManagmentScript : MonoBehaviour {
             }
             else {
                 m_CurrentLifePoint = value;
-                // Debug.Log (m_CurrentLifePoint.ToString ());
             }
         }
     }
     public const int c_StartLifePoint = 20;
+
+    private int m_CurrentScore;
+    public int p_CurrentScore {
+        get {
+            return m_CurrentScore;
+        }
+        set {
+            m_CurrentScore = value;
+        }
+    }
+    public const int p_StartScore = 0;
 
     private TileGridScript m_TileGridScript;
     #endregion

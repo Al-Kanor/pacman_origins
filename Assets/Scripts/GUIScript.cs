@@ -7,7 +7,7 @@ public class GUIScript : MonoBehaviour {
 
     void FixedUpdate () {
         // Màj score
-        transform.GetChild (0).GetComponent<Text> ().text = "Score : " + resourcesManagmentScript.p_CurrentLifePoint;
+        transform.GetChild (0).GetComponent<Text> ().text = "Score : " + resourcesManagmentScript.p_CurrentScore;
 
         // Màj gums
         transform.GetChild (1).GetComponent<Text> ().text = "Gums : " + resourcesManagmentScript.p_CurrentGold;
