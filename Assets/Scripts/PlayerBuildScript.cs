@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 
 public class PlayerBuildScript : MonoBehaviour {
+    public const int c_TowerPrice = 2;
     public GameObject TowerPrefab;
     public ResourcesManagmentScript ResourcesManagmentScript;
     protected TileGridScript m_TileGridScript;
@@ -30,12 +31,12 @@ public class PlayerBuildScript : MonoBehaviour {
             && !spawnTile.m_HasTower) {
             spawnTile.m_HasTower = true;
             Instantiate (TowerPrefab, spawnPosition, transform.rotation);
-            ResourcesManagmentScript.p_CurrentGold -= 10;
+            ResourcesManagmentScript.p_CurrentGold -= c_TowerPrice;
         }
     }
 
     void Update () {
-        if (Input.GetButtonDown (m_PXBuild) && ResourcesManagmentScript.p_CurrentGold >= 10) {
+        if (Input.GetButtonDown (m_PXBuild) && ResourcesManagmentScript.p_CurrentGold >= c_TowerPrice) {
             BuildTower ();
         }
     }
