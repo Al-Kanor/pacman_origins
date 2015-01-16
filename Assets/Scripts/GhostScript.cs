@@ -2,17 +2,28 @@
 using System.Collections;
 
 public class GhostScript : MonoBehaviour {
-
+    #region Members
     public int life = 3;
     public Transform goal;
     public GameObject GhostDeathFXPrefab;
 
     private bool isSlowed = false;
+    private ResourcesManagmentScript m_ResourcesManagmentScript;
+    #endregion
 
-    public void Death () {
-        Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);
+    void Start () {
+        goal = GameObject.Find ("Goal").transform;
+        this.gameObject.GetComponent<NavMeshAgent> ().SetDestination (goal.position);
+        m_ResourcesManagmentScript = GameObject.Find ("ResourcesManager").GetComponent<ResourcesManagmentScript> ();
+    }
+
+    public void Death (bool goalReached = false) {
+        if (!goalReached) {
+            Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);
+        }
         transform.GetChild (0).gameObject.SetActive (false);
 
+        m_ResourcesManagmentScript.GetDamage ();
         StartCoroutine ("EndOfDeath");
     }
 
@@ -38,10 +49,5 @@ public class GhostScript : MonoBehaviour {
     public void SlowDown () {
         isSlowed = true;
         this.gameObject.GetComponent<NavMeshAgent> ().speed = 1;
-    }
-
-    void Start () {
-        goal = GameObject.Find ("Goal").transform;
-        this.gameObject.GetComponent<NavMeshAgent> ().SetDestination (goal.position);
     }
 }

@@ -17,11 +17,30 @@ public class ResourcesManagmentScript : MonoBehaviour {
     }
     public const int c_StartGold = 100;
 
+    private int m_CurrentLifePoint;
+    public int p_CurrentLifePoint {
+        get {
+            return m_CurrentLifePoint;
+        }
+        set {
+            if (value <= 0) {
+                m_CurrentLifePoint = 0;
+                LaunchGameOver ();
+            }
+            else {
+                m_CurrentLifePoint = value;
+                // Debug.Log (m_CurrentLifePoint.ToString ());
+            }
+        }
+    }
+    public const int c_StartLifePoint = 20;
+
     private TileGridScript m_TileGridScript;
     #endregion
 
     protected void Start () {
         p_CurrentGold = c_StartGold;
+        p_CurrentLifePoint = c_StartLifePoint;
         m_TileGridScript = GameObject.Find ("TileGridManager").GetComponent<TileGridScript> ();
         this.StartCoroutine ("PopCollectibleCoroutine");
     }
@@ -45,5 +64,14 @@ public class ResourcesManagmentScript : MonoBehaviour {
         m_TileGridScript.m_Grid.FirstOrDefault (x => x.GetPosition ().Equals (popTilePosition)).m_HasCollectible = true;
         Vector3 popTile3DPosition = new Vector3 (popTilePosition.x, 0.5f, popTilePosition.y);
         GameObject.Instantiate (newCollectible, popTile3DPosition, Quaternion.identity);
+    }
+
+    public void GetDamage () {
+        --p_CurrentLifePoint;
+    }
+
+    private void LaunchGameOver () {
+        Debug.Log ("Game over !");
+        //Application.LoadLevel ("MainMenu");
     }
 }

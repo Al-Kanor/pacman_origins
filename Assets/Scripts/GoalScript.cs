@@ -7,6 +7,7 @@ public class GoalScript : MonoBehaviour {
     void OnTriggerEnter (Collider other) {
         if ("Ghost" == other.tag) {
             GoalFX.GetComponent<ParticleSystem> ().Play ();
+            other.gameObject.GetComponent<GhostScript> ().Death (goalReached: true);
             GameObject.Destroy (other.gameObject);
         }
     }
