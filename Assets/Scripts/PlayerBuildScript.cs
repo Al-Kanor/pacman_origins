@@ -3,8 +3,10 @@ using System.Collections;
 using System.Linq;
 
 public class PlayerBuildScript : MonoBehaviour {
+    public int towerPrice = 5;
     public GameObject TowerPrefab;
     public ResourcesManagmentScript ResourcesManagmentScript;
+
     protected TileGridScript m_TileGridScript;
     protected PlayerMovementScript m_PlayerMovementScript;
 
@@ -33,7 +35,7 @@ public class PlayerBuildScript : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown (m_PXBuild) && ResourcesManagmentScript.p_CurrentGold >= 10) {
+        if (Input.GetButtonDown (m_PXBuild) && ResourcesManagmentScript.p_CurrentGold >= towerPrice) {
             BuildTower ();
         }
     }
