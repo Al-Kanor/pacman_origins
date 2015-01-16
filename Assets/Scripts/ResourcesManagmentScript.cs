@@ -25,14 +25,14 @@ public class ResourcesManagmentScript : MonoBehaviour {
         set {
             if (value <= 0) {
                 m_CurrentLifePoint = 0;
-                LaunchGameOver ();
+                //LaunchGameOver ();
             }
             else {
                 m_CurrentLifePoint = value;
             }
         }
     }
-    public const int c_StartLifePoint = 20;
+    public const int c_StartLifePoint = 1;
 
     private int m_CurrentScore;
     public int p_CurrentScore {
@@ -80,8 +80,10 @@ public class ResourcesManagmentScript : MonoBehaviour {
         --p_CurrentLifePoint;
     }
 
+    /*
     private void LaunchGameOver () {
         Debug.Log ("Game over !");
         //Application.LoadLevel ("MainMenu");
     }
+    */
 }

@@ -11,7 +11,13 @@ public class GameOverScript : MonoBehaviour {
         if (0 == resourcesManagmentScript.p_CurrentLifePoint) {
             //isGameOver = true;
             gameOverText.GetComponent<Text> ().enabled = true;
+            StartCoroutine ("Restart");
         }
+    }
+
+    IEnumerator Restart () {
+        yield return new WaitForSeconds (5);
+        Application.LoadLevel ("MainScene");
     }
 
     void Start () {
