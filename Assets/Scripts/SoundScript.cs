@@ -30,27 +30,27 @@ public class SoundScript : MonoBehaviour {
         if (Manager == null) {
             Manager = this;
             m_GameOver = new SoundEffect ();
-            m_GameOver.mysound = Resources.Load ("Sounds/SFX/game_over") as AudioClip;
+            m_GameOver.mysound = Resources.Load ("Sound/SFX/game_over") as AudioClip;
             m_GameStart = new SoundEffect ();
-            m_GameStart.mysound = Resources.Load ("Sounds/SFX/game_start") as AudioClip;
+            m_GameStart.mysound = Resources.Load ("Sound/SFX/game_start") as AudioClip;
             m_TowerBuild = new SoundEffect ();
-            m_TowerBuild.mysound = Resources.Load ("Sounds/SFX/tower_builded") as AudioClip;
+            m_TowerBuild.mysound = Resources.Load ("Sound/SFX/tower_builded") as AudioClip;
             m_TowerShoot = new SoundEffect ();
-            m_TowerShoot.mysound = Resources.Load ("Sounds/SFX/tower_shoot") as AudioClip;
+            m_TowerShoot.mysound = Resources.Load ("Sound/SFX/tower_shoot") as AudioClip;
             m_GhostIced = new SoundEffect ();
-            m_GhostIced.mysound = Resources.Load ("Sounds/SFX/ghost_iced") as AudioClip;
+            m_GhostIced.mysound = Resources.Load ("Sound/SFX/ghost_iced") as AudioClip;
             m_GhostSpawn = new SoundEffect ();
-            m_GhostSpawn.mysound = Resources.Load ("Sounds/SFX/ghost_spawn") as AudioClip;
+            m_GhostSpawn.mysound = Resources.Load ("Sound/SFX/ghost_spawn") as AudioClip;
             m_GhostHit = new SoundEffect ();
-            m_GhostHit.mysound = Resources.Load ("Sounds/SFX/ghost_hurted") as AudioClip;
+            m_GhostHit.mysound = Resources.Load ("Sound/SFX/ghost_hurted") as AudioClip;
             m_P1Hit = new SoundEffect ();
-            m_P1Hit.mysound = Resources.Load ("Sounds/SFX/pacman_respawn") as AudioClip;
+            m_P1Hit.mysound = Resources.Load ("Sound/SFX/pacman_respawn") as AudioClip;
             m_P2Hit = new SoundEffect ();
-            m_P2Hit.mysound = Resources.Load ("Sounds/SFX/mrs_pacman_respawn") as AudioClip;
+            m_P2Hit.mysound = Resources.Load ("Sound/SFX/mrs_pacman_respawn") as AudioClip;
             m_FruitLost = new SoundEffect ();
-            m_FruitLost.mysound = Resources.Load ("Sounds/SFX/fruit_lost") as AudioClip;
+            m_FruitLost.mysound = Resources.Load ("Sound/SFX/fruit_lost") as AudioClip;
             m_CollectGum = new SoundEffect ();
-            m_CollectGum.mysound = Resources.Load ("Sounds/SFX/collectible_drop") as AudioClip;
+            m_CollectGum.mysound = Resources.Load ("Sound/SFX/collectible_drop") as AudioClip;
         }
     }
 

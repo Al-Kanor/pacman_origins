@@ -17,11 +17,11 @@ public class BulletScript : MonoBehaviour {
         if ("Ghost" == other.gameObject.tag) {
             GhostScript ghostScript = other.gameObject.GetComponent<GhostScript> ();
             ghostScript.life -= strength;
-            Debug.Log ("Son!");
-            SoundScript.Manager.m_GhostHit.Play (Random.Range (0.95f, 1.05f));
+            SoundScript.Manager.m_GhostHit.Play ();
 
             if (canSlowDown) {
                 ghostScript.SlowDown ();
+                SoundScript.Manager.m_GhostIced.Play ();
             }
 
             if (ghostScript.life <= 0) {

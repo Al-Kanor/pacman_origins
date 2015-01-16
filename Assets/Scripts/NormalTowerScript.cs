@@ -8,6 +8,7 @@ public class NormalTowerScript : TowerScript {
     IEnumerator Shoot () {
         do {
             if (hasValidTarget) {
+                SoundScript.Manager.m_TowerShoot.Play ();
                 GameObject bullet = (GameObject)Instantiate (BulletPrefab, transform.position, transform.rotation);
                 bullet.AddComponent<NormalBulletScript> ();
                 bullet.GetComponent<NormalBulletScript> ().target = target;
