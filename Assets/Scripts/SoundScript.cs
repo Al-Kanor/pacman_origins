@@ -26,7 +26,7 @@ public class SoundScript : MonoBehaviour {
     //public SoundEffect m_;
     //public SoundEffectCluster Explosions, DressUp_PickUp, Theatre_PickUp;
 
-    void Start () {
+    void Awake () {
         if (Manager == null) {
             Manager = this;
             m_GameOver = new SoundEffect ();
