@@ -34,10 +34,10 @@ public class GhostScript : MonoBehaviour {
     public void Death (bool goalReached = false) {
         if (!goalReached) {
             Instantiate (GhostDeathFXPrefab, transform.position, transform.rotation);
+            m_ResourcesManagmentScript.GetDamage ();
         }
         transform.GetChild (0).gameObject.SetActive (false);
 
-        m_ResourcesManagmentScript.GetDamage ();
         StartCoroutine ("EndOfDeath");
     }
 
