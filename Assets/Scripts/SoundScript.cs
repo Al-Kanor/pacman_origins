@@ -13,7 +13,8 @@ public class SoundScript : MonoBehaviour {
     public SoundEffect m_GhostSpawn,
         m_GhostHit,
         m_GhostDeath,
-        m_PlayerHit,
+        m_P1Hit,
+        m_P2Hit,
         m_FruitLost,
         m_CollectGum;
     //public SoundEffect m_;
@@ -22,12 +23,13 @@ public class SoundScript : MonoBehaviour {
     void Start () {
         if (Manager == null) {
             Manager = this;
-            m_GhostSpawn.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
-            m_GhostHit.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
-            m_GhostDeath.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
-            m_PlayerHit.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
-            m_FruitLost.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
-            m_CollectGum.mysound = Resources.Load ("Sounds/SFX/") as AudioClip;
+            m_GhostSpawn.mysound = Resources.Load ("Sounds/SFX/ghost_spawn") as AudioClip;
+            m_GhostHit.mysound = Resources.Load ("Sounds/SFX/ghost_hurted") as AudioClip;
+            m_GhostDeath.mysound = Resources.Load ("Sounds/SFX/ghost") as AudioClip;
+            m_P1Hit.mysound = Resources.Load ("Sounds/SFX/pacman_respawn") as AudioClip;
+            m_P2Hit.mysound = Resources.Load ("Sounds/SFX/mrs_pacman_respawn") as AudioClip;
+            m_FruitLost.mysound = Resources.Load ("Sounds/SFX/fruit_lost") as AudioClip;
+            m_CollectGum.mysound = Resources.Load ("Sounds/SFX/collectible_drop") as AudioClip;
         }
     }
 
