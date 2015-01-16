@@ -4,10 +4,10 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Build-man
     21300002: Pac-ManR1
-    21300004: Red-Ghost
-    21300006: Pink-Ghost
-    21300008: Green-Ghost
-    21300010: Yellow-Ghost
+    21300004: Red-Ghost1
+    21300006: Pink-Ghost1
+    21300008: Green-Ghost1
+    21300010: Yellow-Ghost1
     21300012: Blue-Ghost
     21300014: White-Ghost
     21300016: Tower
@@ -33,6 +33,10 @@ TextureImporter:
     21300056: Mrs Pac-ManU2
     21300058: Mrs Pac-ManD1
     21300060: Mrs Pac-ManD2
+    21300062: Red-Ghost2
+    21300064: Pink-Ghost2
+    21300066: Green-Ghost2
+    21300068: Yellow-Ghost2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -84,7 +88,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Red-Ghost
+    - name: Red-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -94,7 +98,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Pink-Ghost
+    - name: Pink-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -104,7 +108,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Green-Ghost
+    - name: Green-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -114,7 +118,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Yellow-Ghost
+    - name: Yellow-Ghost1
       rect:
         serializedVersion: 2
         x: 47
@@ -371,6 +375,46 @@ TextureImporter:
         y: 203
         width: 15
         height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Red-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 183
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pink-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 163
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Green-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 143
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Yellow-Ghost2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 123
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
